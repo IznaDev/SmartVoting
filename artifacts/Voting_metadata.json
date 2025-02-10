@@ -34,6 +34,12 @@
 			},
 			{
 				"anonymous": false,
+				"inputs": [],
+				"name": "AllVotersDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
 				"inputs": [
 					{
 						"indexed": true,
@@ -93,6 +99,19 @@
 						"type": "address"
 					}
 				],
+				"name": "VoterDeleted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "voterAddress",
+						"type": "address"
+					}
+				],
 				"name": "VoterRegistered",
 				"type": "event"
 			},
@@ -130,12 +149,32 @@
 			},
 			{
 				"inputs": [],
+				"name": "deleteAllVoters",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					}
+				],
+				"name": "deleteVoter",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getWinnerId",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint256[]",
 						"name": "",
-						"type": "uint256"
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -158,9 +197,9 @@
 								"type": "uint256"
 							}
 						],
-						"internalType": "struct Voting.Proposal",
+						"internalType": "struct Voting.Proposal[]",
 						"name": "",
-						"type": "tuple"
+						"type": "tuple[]"
 					}
 				],
 				"stateMutability": "view",
@@ -188,6 +227,13 @@
 					}
 				],
 				"name": "myVoiceto",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "newVotingSession",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -359,11 +405,11 @@
 			]
 		},
 		"votingPlus.sol": {
-			"keccak256": "0xde9f84ee057061b92d040920b608f5062bc5682931737fd7675a2f8fb40eca84",
+			"keccak256": "0x9ae91f8b0e15f54f6ac550c2f9965226aae29ccd4ae5b252da5c53d1d9be6a9b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c1fa773b267d7d931e463ab356bd4eba92f69d3102f15bd8ee6a54807ac273e4",
-				"dweb:/ipfs/QmPa5oN8FcCx38TtoKxZ2P2EZxaKxQ8vS8idYQZ833uehq"
+				"bzz-raw://8e2b2a4f759dbf8cf967844ae527b8f51235a3f60c768ec4927ce52e3c97cd27",
+				"dweb:/ipfs/QmaV3iv5grByCMdHQDMgCHZmQFTrowzfq5i4a8rSsJ9Yn1"
 			]
 		}
 	},
